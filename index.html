@@ -1,0 +1,97 @@
+<html>
+
+  <head>
+    <base href="/">
+    <title>BS4U</title>
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.js"></script>
+
+
+
+    <!-- 2. Configure SystemJS -->
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="app/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="app/css/style.css" rel="stylesheet">
+
+
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+
+  </head>
+
+  <!-- 3. Display the application -->
+
+  <body background="app/img/BackGround1.jpg">
+    <bs4u-app>Loading...</bs4u-app>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <script src="app/js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $("#p_ps4u_1").hover(
+                function(){
+                  //alert("aaa");
+                  $("#p_ps4u_2").css('text-decoration', 'underline'); // = "text-decoration: underline;";
+                },
+                function(){
+                  //alert("aaa");
+                  $("#p_ps4u_2").css('text-decoration', ''); // = "text-decoration: underline;";
+                }
+        );
+
+        $("#p_ps4u_2").hover(
+                function(){
+                  //alert("aaa");
+                  $("#p_ps4u_1").css('text-decoration', 'underline'); // = "text-decoration: underline;";
+                },
+                function(){
+                  //alert("aaa");
+                  $("#p_ps4u_1").css('text-decoration', ''); // = "text-decoration: underline;";
+                }
+        );
+
+
+      });
+    </script>
+
+
+  </body>
+
+</html>
